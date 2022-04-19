@@ -25,7 +25,7 @@ class clear(commands.Cog):
                 else:
                     await ctx.send(f"Clearing {number} messages!")
                     time.sleep(0.5)
-                    await ctx.channel.purge(limit=number)
+                    await ctx.channel.purge(limit=number+1)
                     await ctx.send(f"{number} Messages Have Been Cleared!")
                     time.sleep(0.4)
                     await ctx.channel.purge(limit=1)
