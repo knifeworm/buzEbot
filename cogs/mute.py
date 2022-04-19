@@ -27,10 +27,17 @@ class mute(commands.Cog):
     #unmute
     @commands.command()
     async def unmute(self, ctx, member : nextcord.Member, *, reason):
-        if config.mute == True:
-            await member.edit(timeout=None)
-            await ctx.send(f"unmuted {member.mention} for the reason: {reason}")
-            print(f"\n[debug] unmute command used [by: {ctx.author.mention}, member: {member}, reason: {reason}]")
+        if config.unmute == True:
+            if member is None:
+                await ctx.send("")
+                if reason is None:
+                    await ctx.send("")
+            elif reason is None:
+                await ctx.send("")
+            else:
+                await member.edit(timeout=None)
+                await ctx.send(f"unmuted {member.mention} for the reason: {reason}")
+                print(f"\n[debug] unmute command used [by: {ctx.author.mention}, member: {member}, reason: {reason}]")
             
 #setup functions
 def setup(bot):

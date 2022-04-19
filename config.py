@@ -12,6 +12,7 @@ kick = True
 ban = True
 unban = True
 mute = True
+unmute = True
 
 #lists
 filter_words = [
