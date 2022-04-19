@@ -15,6 +15,8 @@ class kick(commands.Cog):
                 await ctx.send("Please mention a member. usage: !kick <@meber> <reason>")
                 if reason is None:
                     await ctx.send("Please specify a reason. usage: !kick <@meber> <reason>")
+            elif reason is None:
+                await ctx.send("Please specify a reason. usage: !kick <@meber> <reason>")
             else:
                 await ctx.send(f"User {member.mention} has been kicked for the reason: {reason}")
                 await member.send(f"You Have Been Kicked From {ctx.guild.name} by the staff member {ctx.author.mention} for the reason: {reason}")
