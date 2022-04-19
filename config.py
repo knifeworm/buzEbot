@@ -69,4 +69,6 @@ filter_words = [
     "that/it",
     "she/her",
     "he/him",
-    "B. I. G. G. E. R"]
+    "B. I. G. G. E. R",
+    "by",
+    "bysexual"]

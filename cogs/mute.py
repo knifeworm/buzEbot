@@ -11,6 +11,7 @@ class mute(commands.Cog):
 
     #mute
     @commands.command()
+    @commands.has_guild_permissions(timeout_members=True)
     async def mute(self, ctx, member : nextcord.Member, time, *, reason):
         if config.mute == True:
             if member is None:
