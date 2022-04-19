@@ -29,7 +29,7 @@ class mute(commands.Cog):
     async def unmute(self, ctx, member : nextcord.Member, *, reason):
         if config.unmute == True:
             if member is None:
-                await ctx.send("")
+                await ctx.send("You Must Specify A Member to Mute!. usage: !mute <member> <time> <reason>")
                 if reason is None:
                     await ctx.send("")
             elif reason is None:
