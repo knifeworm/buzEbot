@@ -12,7 +12,7 @@ import asyncio
 
 #bot definitions (global bot realted variables)
 bot = commands.Bot(command_prefix = "!")
-
+    
 #onready (when the bot starts up/gets online)
 @bot.event
 async def on_ready():
